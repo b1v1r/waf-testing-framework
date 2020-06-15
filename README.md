@@ -1,6 +1,6 @@
 ![tests](https://github.com/signalsciences/waf-testing-framework/workflows/tests/badge.svg)
 # WAF Testing Framework
-WAF Testing Framework is a tool designed to test the effectiveness of WAF and RASP tools in their ability to filter request traffic between web applications and the Internet. Test payloads are taken from text files in a specified directory, transformed to HTTP-requests, and sent to specified address (IP or hostname). Results are recorded and presented in both JSON and HTML report formats.
+WAF Testing Framework is a tool designed to test the effectiveness of WAF and RASP tools in their ability to filter request traffic between HTTP/S client and server. Test payloads are taken from text files in a specified directory, transformed to HTTP-requests, and sent to specified address (IP or hostname). Results are recorded and presented in both JSON and HTML report formats.
 
 ## Running the tool
 #### From precompiled binaries
@@ -12,7 +12,7 @@ The tool requires golang 1.14
 go build -o waftf cmd/main.go
 ```
 
-Executing the binary will run the tool with all default options and flags, and generate a summary report at `output/sumamry.html`, a deatils report at `output/details.html`, and the raw JSON results at `output/results.json`. A runtime log will be created at `output/runtime.log` and an error log will be created at `output/error.log`. Customization options are provided below.
+Executing the binary will run the tool with all default options and flags, and generate a summary report at `output/sumamry.html`, a details report at `output/details.html`, and the raw JSON results at `output/results.json`. A runtime log will be created at `output/runtime.log` and an error log will be created at `output/error.log`. Customization options are provided below.
 
 #### Interpreting the results
 The reports will only display the results of a tested payload when it either fails, is invalid, or causes an error for at least one test location. This means that if a tested payload is correctly handled in all locations, it will not appear in the reports.
