@@ -7,7 +7,7 @@ WAF Testing Framework is a tool designed to test the effectiveness of WAF and RA
 Visit the releases page for precompiled binaries. There are zip files for windows, mac, and linux. Inside each zip file is the binary to run as well as the payloads directory and tool configuration yaml file.
 
 #### From source
-The tool requires golang 1.14
+The tool requires golang 1.14 [(install guides here)](https://golang.org/doc/install)
 ```
 go build -o waftf cmd/main.go
 ```
