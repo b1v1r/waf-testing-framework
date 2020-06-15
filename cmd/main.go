@@ -11,10 +11,10 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/signalsciences/waf-testing-tool/pkg/app"
-	"github.com/signalsciences/waf-testing-tool/pkg/config"
-	"github.com/signalsciences/waf-testing-tool/pkg/logs"
-	"github.com/signalsciences/waf-testing-tool/pkg/results"
+	"github.com/signalsciences/waf-testing-framework/pkg/app"
+	"github.com/signalsciences/waf-testing-framework/pkg/config"
+	"github.com/signalsciences/waf-testing-framework/pkg/logs"
+	"github.com/signalsciences/waf-testing-framework/pkg/results"
 	"github.com/sirupsen/logrus"
 )
 
