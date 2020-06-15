@@ -275,6 +275,13 @@
             align-self: center;
         }
 
+        .matrix-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            border-bottom: 1px solid;
+        }
+
         .matrix-body {
             display: flex;
             flex-direction: column;
@@ -479,8 +486,8 @@
                             <div class="chart-bar" style="width: 0.5%;"></div>
                         </div>
                         <div class="chart-text">
-                            <p>WAF False Positives would break <span class="F" style="font-weight: bolder;">100%</span> of customer requests.</p>
-                            <p>WAF False Negatives would miss <span class="F" style="font-weight: bolder;">0%</span> of attack payloads.</p>
+                            <p>WAF False Positives incorrectly blocked <span class="F" style="font-weight: bolder;">100%</span> of test payloads.</p>
+                            <p>WAF False Negatives incorrectly allowed <span class="F" style="font-weight: bolder;">0%</span> of test payloads.</p>
                         </div>
                     </div>
                 </div>
@@ -541,8 +548,8 @@
                             <div class="chart-bar" style="width: 0.5%;"></div>
                         </div>
                         <div class="chart-text">
-                            <p>WAF False Positives would break <span class="A" style="font-weight: bolder;">0%</span> of customer requests.</p>
-                            <p>WAF False Negatives would miss <span class="A" style="font-weight: bolder;">0%</span> of attack payloads.</p>
+                            <p>WAF False Positives incorrectly blocked <span class="A" style="font-weight: bolder;">0%</span> of test payloads.</p>
+                            <p>WAF False Negatives incorrectly allowed <span class="A" style="font-weight: bolder;">0%</span> of test payloads.</p>
                         </div>
                     </div>
                 </div>
@@ -603,8 +610,8 @@
                             <div class="chart-bar" style="width: 0.5%;"></div>
                         </div>
                         <div class="chart-text">
-                            <p>WAF False Positives would break <span class="F" style="font-weight: bolder;">50%</span> of customer requests.</p>
-                            <p>WAF False Negatives would miss <span class="F" style="font-weight: bolder;">0%</span> of attack payloads.</p>
+                            <p>WAF False Positives incorrectly blocked <span class="F" style="font-weight: bolder;">50%</span> of test payloads.</p>
+                            <p>WAF False Negatives incorrectly allowed <span class="F" style="font-weight: bolder;">0%</span> of test payloads.</p>
                         </div>
                     </div>
                 </div>
@@ -627,45 +634,47 @@
                 </div>
             </div>
             <div class="matrix-body">
-                <div class="test-set">
-                    <div class="line-payload"></div>
-                    <div class="location-wrapper">
-                        <div class="test-set-title">
-                            <h3>Test1</h3>
+                <div class="matrix-header">
+                    <div class="test-set">
+                        <div class="line-payload"></div>
+                        <div class="location-wrapper">
+                            <div class="test-set-title">
+                                <h3>Test1</h3>
+                            </div>
+                        </div>
+                        <div class="location-wrapper">
+                            <div class="test-set-title">
+                                <h3>Test2</h3>
+                            </div>
+                        </div>
+                        <div class="location-wrapper">
+                            <div class="test-set-title">
+                                <h3>Test3</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="location-wrapper">
-                        <div class="test-set-title">
-                            <h3>Test2</h3>
+                    <div class="header-row">
+                        <div class="line-payload">
+                            <div class="line">Line</div>
+                            <div class="payload">Payload</div>
                         </div>
-                    </div>
-                    <div class="location-wrapper">
-                        <div class="test-set-title">
-                            <h3>Test3</h3>
+                        <div class="location-wrapper">
+                            <div class="set-locations">
+                                <div class="location-header rotate">body</div>
+                                <div class="location-header rotate">header</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="header-row">
-                    <div class="line-payload">
-                        <div class="line">Line</div>
-                        <div class="payload">Payload</div>
-                    </div>
-                    <div class="location-wrapper">
-                        <div class="set-locations">
-                            <div class="location-header rotate">body</div>
-                            <div class="location-header rotate">header</div>
+                        <div class="location-wrapper">
+                            <div class="set-locations">
+                                <div class="location-header rotate">body</div>
+                                <div class="location-header rotate">header</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="location-wrapper">
-                        <div class="set-locations">
-                            <div class="location-header rotate">body</div>
-                            <div class="location-header rotate">header</div>
-                        </div>
-                    </div>
-                    <div class="location-wrapper">
-                        <div class="set-locations">
-                            <div class="location-header rotate">body</div>
-                            <div class="location-header rotate">header</div>
+                        <div class="location-wrapper">
+                            <div class="set-locations">
+                                <div class="location-header rotate">body</div>
+                                <div class="location-header rotate">header</div>
+                            </div>
                         </div>
                     </div>
                 </div>
