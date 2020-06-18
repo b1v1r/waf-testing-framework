@@ -59,7 +59,7 @@ func main() {
 	errorLog := logs.NewLogger(filepath.FromSlash("output/error.log"))
 	errorLog.SetLevel(logrus.ErrorLevel)
 	log.Printf("starting WAF Testing Framework version %v\n", waftfversion)
-	log.Printf("using %v CPUs and %v workers", runtime.GOMAXPROCS(0), workerLimit)
+	log.Printf("using %v CPUs and %v workers", maxProcs, workerLimit)
 
 	//read in the provided file
 	r, err := os.Open(configFile)

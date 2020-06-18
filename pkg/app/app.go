@@ -37,7 +37,7 @@ type HTTPClient interface {
 	Do(req *http.Request) (*http.Response, error)
 }
 
-//Application represents the application configurations
+//Application represents the application object
 type Application struct {
 	Client             HTTPClient
 	Log                *logrus.Logger
