@@ -86,7 +86,7 @@ There are a number of option flags you can pass to the binary
 -debug, -d      <true/false>  set the log level to debug. DEFAULT false
 -processor, -p  <number>      the maximum number of operating system threads (CPUs) that will be
                               used to execute the testing tool simultaneously. DEFAULT: maximum for your system
--rate, -r       <number>      set the maximum number of requests per second genearted during the test. DEFAULT: 50
+-rate, -r       <number>      set the maximum number of requests per second generated during the test. DEFAULT: 50
 -worker, -w     <number>      set the maximum number of workers to concurrently send requests and process
                               results. DEFAULT: 10
 -version, -v                  prints the current version of the tool
@@ -114,6 +114,13 @@ wafs:
   - name: WAF1
     protocol: HTTP
     host: localhost
+    port: 80
+    path:
+    block_condition:
+      code: 406
+  - name: WAF2
+    protocol: HTTP
+    host: anotherhost
     port: 80
     path:
     block_condition:
